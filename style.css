@@ -1,0 +1,601 @@
+@font-face {
+    font-family: SFProDisplay-Regular;
+    src: url('fonts/SFProDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-family: SFProDisplay-Bold;
+    src: url('fonts/SFProDisplay-Bold.ttf');
+}
+
+@font-face {
+    font-family: SFProDisplay-Black;
+    src: url('fonts/SFProDisplay-Black.ttf');
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track {
+  background: #000;
+}
+body::-webkit-scrollbar-thumb {
+  background: #ffffb2;
+  border: 3px solid #ffffb2;
+  border-radius: 12px;
+}
+
+.error {
+    color: red;
+    font-size: 24px;
+    background: #000;
+    text-align: center;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+
+  font-family: 'SFProDisplay-Regular';
+  color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CSS RESET END */
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+header {
+    background: #000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0px;
+}
+
+.logo {
+    font-size: 25px;
+    font-family: 'SFProDisplay-Bold';
+}
+
+.logo span {
+    font-family: 'SFProDisplay-Black';
+    color: #ffffb2;
+}
+
+nav {
+    font-size: 20px;
+    max-width: 435px;
+    min-width: 435px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-header a {
+    position: relative;
+	  cursor: pointer;
+}
+
+#nav-header a:after {
+	display: block;
+	position: absolute;
+  bottom: -2px;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #ffffb2; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.4s ease-out; /*задаём время анимации*/
+}
+
+#nav-header a:hover:after,
+            a:focus:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+
+.header-fixed {
+    z-index: 999;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation-name: show-header;
+    animation-duration: 1s;
+}
+
+@keyframes show-header {
+    0% {
+        opacity: 0;
+        top: -70px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+
+}
+
+/* header end */
+
+/* mainpage */
+
+.mainpage {
+    background: #000;
+}
+
+.mainpage-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 200px;
+    padding-bottom: 235px;
+    align-items: center;
+}
+
+
+
+.suptitle {
+    font-size: 16px;
+    color: #ffffb2;
+}
+
+.title {
+    font-size: 48.83px;
+    font-family: 'SFProDisplay-Bold';
+}
+
+.titles {
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.title span {
+    font-size: 48.83px;
+    font-family: 'SFProDisplay-Black';
+    color: #ffffb2;
+}
+
+.button {
+    border: 3px solid #ffffb2;
+    color: #ffffb2;
+    border-radius: 20px;
+    width: 200px;
+    min-height: 70px;
+    padding: 18px 63px;
+
+    transition: all .3s ease-in-out;
+}
+
+.button:hover {
+  background: #ffffb2;
+  color: #000;
+}
+
+
+/* mainpage end */
+
+/* works */
+
+.works {
+    background: #0A0807;
+    padding-top: 146px;
+    padding-bottom: 146px;
+}
+
+.works-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section-title h1 {
+    font-family: 'SFProDisplay-Bold';
+    font-size: 48.83px;
+}
+
+.line {
+    width: 53px;
+    height: 4px;
+    background: #ffffb2;
+    margin-right: 27px  ;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #ffffb2;
+}
+
+.slider {
+    width: 100%;
+    margin: 0 auto;
+
+    margin-top: 46px;
+}
+
+.slider-wrapper {
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    max-width: 290px;
+}
+
+.swiper-slide img{
+    width: 100%;
+    height: 421px;
+    margin-right: 24px;
+}
+
+/* works end */
+
+/* reviews */
+
+.reviews {
+    background: #000;
+    padding: 146px 0px;
+}
+
+.text-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.reviews-items {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 72px;
+    width: 100%;
+}
+
+.reviews-item {
+    border: 3px solid #ffffb2;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 24px;
+}
+
+.reviews-item:nth-child(2) {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.reviews-item:nth-child(4) {
+  margin-left: 10px;
+}
+
+.rev-text {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#userpic {
+    position: relative;
+    top: 60px;
+}
+
+
+
+/* reviews end */
+
+/* feedback */
+
+.section-title h1 span {
+    font-family: 'SFProDisplay-Bold';
+    color: #ffffb2;
+}
+
+.feedback {
+    background: #0A0807;
+    padding: 146px 0px;
+}
+
+input[type="text"] {
+    font-family: inherit; /* 1 */
+    font-size: inherit; /* 1 */
+    line-height: inherit; /* 1 */
+    margin: 0; /* 2 */
+}
+
+.inp-fb {
+    outline: none;
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffffb2;
+    background-color: #0A0807;
+    background-clip: padding-box;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.inp-fb::placeholder {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffffb2;
+}
+
+.area-fb {
+    outline: none;
+    height: 100%;
+}
+
+.feedback-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    max-width: 580px;
+
+    margin-top: 80px;
+    margin-bottom: 48px;
+}
+
+.left {
+    max-width: 201px;
+    margin-right: 54px;
+    height: 164px;
+}
+
+.left .inp-fb {
+    margin-bottom: 30px;
+    height: 35%;
+}
+
+.left .inp-fb:last-child {
+    margin-bottom: 0px;
+}
+
+.right {
+    width: 352px;
+    height: 164px;
+}
+
+.button-wrapper {
+    max-width: 610px;
+    text-align: right;
+
+    margin-top: 68px;
+}
+
+
+/* feedback end */
+
+/* footer */
+
+footer {
+    background: #000;
+    padding: 156px 0px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    font-size: 48.83px;
+    font-family: 'SFProDisplay-Bold';
+}
+
+.footer-left span {
+    font-family: 'SFProDisplay-Black';
+}
+
+.footer-left .line {
+    margin: 16px 0px;
+}
+
+.footer-right {
+    display: flex;
+    text-align: right;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 63px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title {
+    font-size: 20px;
+    color: #ffffb2;
+    font-family: 'SFProDisplay-Bold';
+    margin-bottom: 24px;
+}
+
+.footer-right a {
+    margin-bottom: 16px;
+}
+
+/* footer end */
+
+/* adaptive */
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 992px;
+    margin: 0 auto;
+  }
+
+  .swiper-slide img{
+    width: 100%;
+    height: 240px;
+    margin-right: 24px;
+  }
+  
+  .reviews-item {
+    height: 240px;
+  }
+
+  #userpic {
+    position: relative;
+    top: 10px;
+  }
+
+  .header-container {
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 15px;
+  }
+
+  .reviews-container {
+    padding: 30px;
+    margin: 0;
+  }
+  
+  .reviews-item:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .header-container {
+    margin: 0;
+  }
+
+  .reviews-container {
+    margin: 0;
+  }
+
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .bear {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .reviews-item:nth-child(3) {
+    display: none;
+  }
+
+  .swiper-slide {
+    height: 300px;
+  }
+}
+
+@media (max-width: 610px) {
+  #nav-header a:nth-child(1) {
+    display: none;
+  }
+
+  #nav-header a:nth-child(2) {
+    display: none;
+  }
+
+  #nav-header a:nth-child(3) {
+    display: none;
+  }
+
+  #nav-header a:nth-child(5) {
+    display: none;
+  }
+
+  nav {
+    justify-content: center;
+    max-width: none;
+  }
+
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .swiper-slide img{
+    margin-right: 0px;
+  }
+
+  .swiper-slide {
+    margin-right: 0;
+  }
+
+  .feedback-wrapper {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .right{
+    width: 200px;
+    height: 150px;
+  }
+
+  .reviews-item:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 430px;
+  }
+
+  .mainpage-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 320px) {
+
+}
+
+/* adaptive end */

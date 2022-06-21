@@ -1,0 +1,69 @@
+.login {
+  background: #000;
+  padding-top: 96px;
+}
+
+.login .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vertical-line {
+  height: 694px;
+  width: 4px;
+  background: #ffffb4;
+}
+
+.login-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  margin-bottom: 48px;
+}
+
+.log {
+  display: flex;
+  flex-direction: column;
+}
+
+.inp-fb {
+  font-size: 20px;
+  padding: 15px 30px;
+  width: 260px;
+}
+
+.log .inp-fb:nth-child(2) {
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+.button {
+  background: #000;
+  font-size: 20px;
+}
+
+.login-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.login-right .section-title {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.login-right .section-title .line {
+  margin-right: 0px;
+  margin-left: 27px;
+}
+
+.reg .inp-fb:nth-child(2) {
+  margin: 24px 0px;
+}
+
+.reg button {
+  margin-top: 48px;
+}

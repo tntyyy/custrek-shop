@@ -1,0 +1,104 @@
+.admin {
+  background: #000;
+  padding-top: 96px;  
+}
+
+.left-section input {
+  outline: none;
+  display: block;
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffb2;
+  background-color: #0A0807;
+  background-clip: padding-box;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.left-section input::placeholder {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffb2;
+}
+
+.right-section textarea {
+  outline: none;
+  display: block;
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffb2;
+  background-color: #0A0807;
+  background-clip: padding-box;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
+  height: 95%;
+  width: 485px;
+}
+
+.right-section textarea::placeholder {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffb2;
+}
+
+button {
+  background: #000;
+  font-size: 20px;
+}
+
+.admin-wrapper {
+  margin-top: 48px;
+}
+
+form {
+  display: flex;
+  justify-content: flex-start;
+
+  height: 350px;
+}
+
+.image {
+  margin-right: 40px;
+
+  padding: 15px;
+  border: 3px dashed #ffffb2;
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image input {
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid #ffffb2;
+}
+
+.left-section {
+  margin-right: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-section input {
+  height: 50px;
+}
